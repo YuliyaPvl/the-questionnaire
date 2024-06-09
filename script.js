@@ -10,7 +10,6 @@ form.addEventListener("submit", (event) => {
 
     if (!input.value) {
       alert(`Пожалуйста, заполните поле ${field.textContent}`);
-      input.focus();
       return;
     }
   }
@@ -22,14 +21,14 @@ form.addEventListener("submit", (event) => {
   const agree = document.getElementById('agree').checked;
 
   const body = JSON.stringify({
-    "name": name,
-    "secondName": secondName,
-    "phone": phone,
-    "email": email,
-    "agree": agree
-  });
+    name,
+    secondName,
+    phone,
+    email,
+    agree
+    });
 
-  fetch('https://YuliyaPvl.space/user', {
+  fetch('https://polinashneider.space/user', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
